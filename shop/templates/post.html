@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1 class="heading">
+    <a class="back-button" href="{{request.META.HTTP_REFERER}}"><</a>
+    <a>{{post.title}}</a>
+  </h1>
+  <div class="profile-info" id="container">
+    <a> <img src="{{post.image.url}}" alt="" class="item-img"> </a>
+    <div class="about-item">
+      <h5> About item</h5>
+      <p>{{post.discribtion}}</p>
+      <h2>{{post.price}}$</h2>
+    </div>
+  </div>
+{% endblock %}
